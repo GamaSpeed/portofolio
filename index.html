@@ -4,18 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Intelligence Artificielle</title>
+    <title>Franklin Gameni — AI Engineer</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Devicons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -28,11 +30,17 @@
     <header>
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
-                <div class="logo">Portfolio</div>
-                <nav>
-                    <a href="#accueil">Accueil</a>
-                    <a href="#projets">Projets</a>
-                    <a href="#contact">Contact</a>
+                <div class="logo">FG<span class="accent">_</span>AI</div>
+                <nav class="d-flex align-items-center gap-2">
+                    <a href="#accueil" data-fr="Accueil" data-en="Home">Accueil</a>
+                    <a href="#projets" data-fr="Projets" data-en="Projects">Projets</a>
+                    <a href="#competences" data-fr="Compétences" data-en="Skills">Compétences</a>
+                    <a href="#cv-section" data-fr="CV" data-en="Resume">CV</a>
+                    <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
+                    <button class="lang-toggle" id="langToggle" onclick="toggleLang()">
+                        <span class="lang-icon">🌐</span>
+                        <span id="langLabel">EN</span>
+                    </button>
                 </nav>
             </div>
         </div>
@@ -45,41 +53,129 @@
                 <div class="col-lg-5 text-center mb-5 mb-lg-0">
                     <div class="profile-container fade-in">
                         <div class="profile-ring"></div>
-                        <!-- Remplacez src par le chemin de votre photo -->
+                        <div class="profile-ring ring-2"></div>
                         <img src="./images/profil.jpeg" alt="Photo de profil" class="profile-image">
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <div class="hero-content fade-in delay-2">
+                        <div class="badge-status">
+                            <span class="status-dot"></span>
+                            <span data-fr="Disponible pour de nouvelles opportunités" data-en="Open to new opportunities">Disponible pour de nouvelles opportunités</span>
+                        </div>
                         <h1>
-                            Bonjour, moi c'est<br>
+                            <span data-fr="Bonjour, moi c'est" data-en="Hello, I'm">Bonjour, moi c'est</span><br>
                             <span class="gradient-text">Franklin Gameni</span>
                         </h1>
-                        <p>
-                            Étudiant en Intelligence Artificielle au Collège La Cité, titulaire d'une licence en
-                            informatique. Passionné par l'IA et les technologies innovantes, il développe des projets en
-                            machine learning, computer vision et développement web. Il s'intéresse particulièrement aux
-                            applications concrètes de l'IA dans la résolution de problèmes réels.
+                        <p class="hero-role" data-fr="Ingénieur en Intelligence Artificielle" data-en="Artificial Intelligence Engineer">Ingénieur en Intelligence Artificielle</p>
+                        <p data-fr="Diplômé en Intelligence Artificielle au Collège La Cité (Ottawa) et titulaire d'une licence en informatique de l'Université de Douala. Passionné par l'IA et les technologies innovantes, je développe des projets en machine learning, computer vision et développement web. Je m'intéresse particulièrement aux applications concrètes de l'IA dans la résolution de problèmes réels."
+                           data-en="Graduate in Artificial Intelligence from Collège La Cité (Ottawa) and holder of a Bachelor's degree in Computer Science from the University of Douala. Passionate about AI and innovative technologies, I develop projects in machine learning, computer vision, and web development. I focus particularly on practical AI applications for real-world problem solving.">
+                            Diplômé en Intelligence Artificielle au Collège La Cité (Ottawa) et titulaire d'une licence en informatique de l'Université de Douala. Passionné par l'IA et les technologies innovantes, je développe des projets en machine learning, computer vision et développement web. Je m'intéresse particulièrement aux applications concrètes de l'IA dans la résolution de problèmes réels.
                         </p>
                         <div class="code-block">
-                            <div><span class="code-comment">// Mon expertise</span></div>
+                            <div><span class="code-comment">// <span data-fr="Mon expertise" data-en="My expertise">Mon expertise</span></span></div>
                             <div><span class="code-keyword">const</span> competences = {</div>
-                            <div>&nbsp;&nbsp;domaines: [<span class="code-string">"Machine Learning"</span>, <span
-                                    class="code-string">"Deep Learning"</span>, <span class="code-string">"NLP"</span>,
-                                <span class="code-string">"Computer Vision"</span>, <span class="code-string">"Web
-                                    development"</span>],
-                            </div>
-                            <div>&nbsp;&nbsp;langages: [<span class="code-string">"Python"</span>, <span
-                                    class="code-string">"CSS"</span>, <span class="code-string">"SQL"</span>, <span
-                                    class="code-string">"HTML"</span>, <span class="code-string">"JavaScript"</span>,
-                                <span class="code-string">"PHP"</span>],
-                            </div>
-                            <div>&nbsp;&nbsp;frameworks: [<span class="code-string">"TensorFlow"</span>, <span
-                                    class="code-string">"PyTorch"</span>, <span
-                                    class="code-string">"Scikit-learn"</span>]</div>
+                            <div>&nbsp;&nbsp;domaines: [<span class="code-string">"Machine Learning"</span>, <span class="code-string">"Deep Learning"</span>, <span class="code-string">"NLP"</span>, <span class="code-string">"Computer Vision"</span>, <span class="code-string">"Web Dev"</span>],</div>
+                            <div>&nbsp;&nbsp;langages: [<span class="code-string">"Python"</span>, <span class="code-string">"CSS"</span>, <span class="code-string">"SQL"</span>, <span class="code-string">"HTML"</span>, <span class="code-string">"JavaScript"</span>, <span class="code-string">"PHP"</span>],</div>
+                            <div>&nbsp;&nbsp;frameworks: [<span class="code-string">"TensorFlow"</span>, <span class="code-string">"PyTorch"</span>, <span class="code-string">"Scikit-learn"</span>]</div>
                             <div>};</div>
                         </div>
+                        <div class="hero-ctas">
+                            <a href="#cv-section" class="btn-primary-cta">
+                                <i class="fas fa-file-alt"></i>
+                                <span data-fr="Voir mon CV" data-en="View Resume">Voir mon CV</span>
+                            </a>
+                            <a href="#projets" class="btn-secondary-cta">
+                                <span data-fr="Mes projets" data-en="My projects">Mes projets</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Carousel Section -->
+    <section class="skills-section py-5" id="competences">
+        <div class="container">
+            <h2 class="section-title fade-in" data-fr="Compétences & Outils" data-en="Skills & Tools">Compétences & Outils</h2>
+
+            <!-- Carousel Row 1 — Languages & Frameworks -->
+            <p class="skills-category-label fade-in" data-fr="Langages & Frameworks" data-en="Languages & Frameworks">Langages & Frameworks</p>
+            <div class="carousel-wrapper fade-in">
+                <div class="skills-carousel" id="carousel1">
+                    <div class="skill-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                    <div class="skill-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                    <div class="skill-item"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+                    <div class="skill-item"><i class="devicon-c-plain colored"></i><span>C</span></div>
+                    <div class="skill-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+                    <div class="skill-item"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+                    <div class="skill-item"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+                    <div class="skill-item"><i class="devicon-pytorch-plain colored"></i><span>PyTorch</span></div>
+                    <div class="skill-item"><i class="devicon-tensorflow-original colored"></i><span>TensorFlow</span></div>
+                    <div class="skill-item"><i class="devicon-flask-original"></i><span>Flask</span></div>
+                    <div class="skill-item"><i class="devicon-fastapi-plain colored"></i><span>FastAPI</span></div>
+                    <div class="skill-item"><i class="devicon-react-original colored"></i><span>React</span></div>
+                    <div class="skill-item"><i class="devicon-laravel-plain colored"></i><span>Laravel</span></div>
+                    <div class="skill-item"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
+                    <!-- duplicate for seamless loop -->
+                    <div class="skill-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                    <div class="skill-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                    <div class="skill-item"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+                    <div class="skill-item"><i class="devicon-c-plain colored"></i><span>C</span></div>
+                    <div class="skill-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+                    <div class="skill-item"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+                    <div class="skill-item"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+                    <div class="skill-item"><i class="devicon-pytorch-plain colored"></i><span>PyTorch</span></div>
+                    <div class="skill-item"><i class="devicon-tensorflow-original colored"></i><span>TensorFlow</span></div>
+                    <div class="skill-item"><i class="devicon-flask-original"></i><span>Flask</span></div>
+                    <div class="skill-item"><i class="devicon-fastapi-plain colored"></i><span>FastAPI</span></div>
+                    <div class="skill-item"><i class="devicon-react-original colored"></i><span>React</span></div>
+                    <div class="skill-item"><i class="devicon-laravel-plain colored"></i><span>Laravel</span></div>
+                    <div class="skill-item"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
+                    <div class="skill-item"><i class="devicon-c-plain colored"></i><span>C</span></div>
+                    <div class="skill-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+                </div>
+            </div>
+
+            <!-- Carousel Row 2 — Tools & Infra (reverse direction) -->
+            <p class="skills-category-label fade-in mt-4" data-fr="Outils & Infrastructure" data-en="Tools & Infrastructure">Outils & Infrastructure</p>
+            <div class="carousel-wrapper fade-in">
+                <div class="skills-carousel reverse" id="carousel2">
+                    <div class="skill-item"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
+                    <div class="skill-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                    <div class="skill-item"><i class="devicon-github-original"></i><span>GitHub</span></div>
+                    <div class="skill-item"><i class="devicon-vscode-plain colored"></i><span>VS Code</span></div>
+                    <div class="skill-item"><i class="devicon-jupyter-plain colored"></i><span>Jupyter</span></div>
+                    <div class="skill-item"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+                    <div class="skill-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+                    <div class="skill-item"><i class="devicon-numpy-original colored"></i><span>NumPy</span></div>
+                    <div class="skill-item"><i class="devicon-pandas-original colored"></i><span>Pandas</span></div>
+                    <div class="skill-item"><i class="devicon-opencv-plain colored"></i><span>OpenCV</span></div>
+                    <div class="skill-item"><i class="devicon-linux-plain"></i><span>Linux</span></div>
+                    <div class="skill-item"><i class="devicon-kaggle-original colored"></i><span>Kaggle</span></div>
+                    <div class="skill-item skill-text-icon"><span class="skill-text-logo ollama-logo">🦙</span><span>Ollama</span></div>
+                    <div class="skill-item skill-text-icon"><span class="skill-text-logo n8n-logo">n8n</span><span>n8n</span></div>
+                    <div class="skill-item skill-text-icon"><span class="skill-text-logo mlflow-logo">MLflow</span><span>MLflow</span></div>
+                    <div class="skill-item skill-text-icon"><span class="skill-text-logo dagshub-logo">🐙</span><span>DagsHub</span></div>
+                    <!-- duplicate -->
+                    <div class="skill-item"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
+                    <div class="skill-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                    <div class="skill-item"><i class="devicon-github-original"></i><span>GitHub</span></div>
+                    <div class="skill-item"><i class="devicon-vscode-plain colored"></i><span>VS Code</span></div>
+                    <div class="skill-item"><i class="devicon-jupyter-plain colored"></i><span>Jupyter</span></div>
+                    <div class="skill-item"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+                    <div class="skill-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+                    <div class="skill-item"><i class="devicon-numpy-original colored"></i><span>NumPy</span></div>
+                    <div class="skill-item"><i class="devicon-pandas-original colored"></i><span>Pandas</span></div>
+                    <div class="skill-item"><i class="devicon-opencv-plain colored"></i><span>OpenCV</span></div>
+                    <div class="skill-item"><i class="devicon-linux-plain"></i><span>Linux</span></div>
+                    <div class="skill-item"><i class="devicon-kaggle-original colored"></i><span>Kaggle</span></div>
+                    <div class="skill-item skill-text-icon"><span class="skill-text-logo ollama-logo">🦙</span><span>Ollama</span></div>
+                    <div class="skill-item skill-text-icon"><span class="skill-text-logo n8n-logo">n8n</span><span>n8n</span></div>
+                    <div class="skill-item skill-text-icon"><span class="skill-text-logo mlflow-logo">MLflow</span><span>MLflow</span></div>
+                    <div class="skill-item skill-text-icon"><span class="skill-text-logo dagshub-logo">🐙</span><span>DagsHub</span></div>
                 </div>
             </div>
         </div>
@@ -88,24 +184,21 @@
     <!-- Projects Section -->
     <section class="py-5" id="projets">
         <div class="container">
-            <h2 class="section-title fade-in">Projets</h2>
-
+            <h2 class="section-title fade-in" data-fr="Projets" data-en="Projects">Projets</h2>
             <div class="row g-4">
+
                 <!-- Project Card 1 -->
                 <div class="col-md-6 col-lg-4 fade-in delay-3">
-                    <a href="https://github.com/GamaSpeed/E-Emotion-Detection" target="_blank"
-                        class="project-card">
+                    <a href="https://github.com/GamaSpeed/E-Emotion-Detection" target="_blank" class="project-card">
                         <div class="project-image-container">
                             <i class="fab fa-github github-icon"></i>
                             <img src="./images/edusense.jpg" alt="EduSense" class="project-image">
                             <div class="project-overlay"></div>
                         </div>
                         <div class="project-body">
-                            <h3 class="project-title">EduSense — Détection d'émotions en e-learning</h3>
-                            <p class="project-description">
-                                Système temps réel de détection d'états affectifs (ennui, engagement,
-                                confusion, frustration) via webcam. Architecture EfficientNet-B2 + GRU
-                                Bidirectionnel déployée en multi-VM avec tableau de bord enseignant live.
+                            <h3 class="project-title">EduSense</h3>
+                            <p class="project-description" data-fr="Système temps réel de détection d'états affectifs (ennui, engagement, confusion, frustration) via webcam. Architecture EfficientNet-B2 + GRU Bidirectionnel déployée en multi-VM avec tableau de bord enseignant live." data-en="Real-time system for detecting affective states (boredom, engagement, confusion, frustration) via webcam. EfficientNet-B2 + Bidirectional GRU architecture deployed on multi-VM with live teacher dashboard.">
+                                Système temps réel de détection d'états affectifs (ennui, engagement, confusion, frustration) via webcam. Architecture EfficientNet-B2 + GRU Bidirectionnel déployée en multi-VM avec tableau de bord enseignant live.
                             </p>
                             <div class="project-tech">
                                 <span class="tech-tag">PyTorch</span>
@@ -121,26 +214,20 @@
 
                 <!-- Project Card 2 -->
                 <div class="col-md-6 col-lg-4 fade-in delay-1">
-                    <a href="https://github.com/GamaSpeed/Parking-lot-classification" target="_blank"
-                        class="project-card">
+                    <a href="https://github.com/GamaSpeed/Parking-lot-classification" target="_blank" class="project-card">
                         <div class="project-image-container">
                             <i class="fab fa-github github-icon"></i>
-                            <!-- Remplacez par vos images de projets -->
                             <img src="./images/projet1.png" alt="Projet 1" class="project-image">
                             <div class="project-overlay"></div>
                         </div>
                         <div class="project-body">
-                            <h3 class="project-title">Classification d'Images</h3>
-                            <p class="project-description">
-                                Développement d'un modèle de deep learning pour classifier des places de parking avec
-                                une précision
-                                de 86%.
-                                Utilisation de CNN et transfer learning avec GoogleNet.
+                            <h3 class="project-title" data-fr="Classification d'Images" data-en="Image Classification">Classification d'Images</h3>
+                            <p class="project-description" data-fr="Développement d'un modèle de deep learning pour classifier des places de parking avec une précision de 86%. Utilisation de CNN et transfer learning avec GoogleNet." data-en="Deep learning model to classify parking spaces with 86% accuracy. CNN and transfer learning with GoogleNet.">
+                                Développement d'un modèle de deep learning pour classifier des places de parking avec une précision de 86%. Utilisation de CNN et transfer learning avec GoogleNet.
                             </p>
                             <div class="project-tech">
                                 <span class="tech-tag">Python</span>
                                 <span class="tech-tag">PyTorch</span>
-                                <!-- <span class="tech-tag">Keras</span> -->
                                 <span class="tech-tag">OpenCV</span>
                             </div>
                         </div>
@@ -156,14 +243,13 @@
                             <div class="project-overlay"></div>
                         </div>
                         <div class="project-body">
-                            <h3 class="project-title">Analyse de Sentiments</h3>
-                            <p class="project-description">
-                                Application web d'analyse de sentiments en temps réel sur des tweets.
-                                Intégration d'un modèle BERT fine-tuné et déploiement avec Flask.
+                            <h3 class="project-title" data-fr="Analyse de Sentiments" data-en="Sentiment Analysis">Analyse de Sentiments</h3>
+                            <p class="project-description" data-fr="Application web d'analyse de sentiments en temps réel sur des tweets. Intégration d'un modèle BERT fine-tuné et déploiement avec Flask." data-en="Real-time web application for sentiment analysis on tweets. Fine-tuned BERT model integration with Flask deployment.">
+                                Application web d'analyse de sentiments en temps réel sur des tweets. Intégration d'un modèle BERT fine-tuné et déploiement avec Flask.
                             </p>
                             <div class="project-tech">
                                 <span class="tech-tag">Python</span>
-                                <span class="tech-tag">NTLK</span>
+                                <span class="tech-tag">NLTK</span>
                                 <span class="tech-tag">Textblob</span>
                                 <span class="tech-tag">Spacy</span>
                             </div>
@@ -176,18 +262,17 @@
                     <a href="https://github.com/GamaSpeed/RAG-with-Ollama" target="_blank" class="project-card">
                         <div class="project-image-container">
                             <i class="fab fa-github github-icon"></i>
-                            <img src="./images/projet4.png" alt="Projet 6" class="project-image">
+                            <img src="./images/projet4.png" alt="Projet RAG" class="project-image">
                             <div class="project-overlay"></div>
                         </div>
                         <div class="project-body">
                             <h3 class="project-title">Système RAG</h3>
-                            <p class="project-description">
-                                Développement d'un système de Retrieval-Augmented Generation pour
-                                la recherche documentaire intelligente avec base de connaissances.
+                            <p class="project-description" data-fr="Développement d'un système de Retrieval-Augmented Generation pour la recherche documentaire intelligente avec base de connaissances." data-en="Development of a Retrieval-Augmented Generation system for intelligent document search with a knowledge base.">
+                                Développement d'un système de Retrieval-Augmented Generation pour la recherche documentaire intelligente avec base de connaissances.
                             </p>
                             <div class="project-tech">
                                 <span class="tech-tag">Python</span>
-                                <span class="tech-tag">LangChain</span>
+                                <span class="tech-tag">Ollama</span>
                                 <span class="tech-tag">ChromaDB</span>
                                 <span class="tech-tag">FastAPI</span>
                             </div>
@@ -200,16 +285,13 @@
                     <a href="https://github.com/Martinien07/projet_app_web" target="_blank" class="project-card">
                         <div class="project-image-container">
                             <i class="fab fa-github github-icon"></i>
-                            <img src="./images/projet5.png" alt="Projet 4" class="project-image">
+                            <img src="./images/projet5.png" alt="Projet 5" class="project-image">
                             <div class="project-overlay"></div>
                         </div>
                         <div class="project-body">
-                            <h3 class="project-title">Application de Gestion Santé et Sécurité sur les Chantiers</h3>
-                            <p class="project-description">
-                                Cette application web permet aux entrepreneurs, maîtres d'œuvre et inspecteurs de gérer
-                                la santé et la sécurité sur les chantiers.
-                                Elle offre un suivi des incidents, inspections, notifications et affectations des
-                                utilisateurs selon leurs rôles sur différents chantiers.
+                            <h3 class="project-title" data-fr="Application Santé & Sécurité Chantiers" data-en="Construction Health & Safety App">Application Santé & Sécurité Chantiers</h3>
+                            <p class="project-description" data-fr="Application web pour la gestion santé et sécurité sur les chantiers. Suivi des incidents, inspections, notifications et affectations selon les rôles utilisateurs." data-en="Web application for managing health and safety on construction sites. Incident tracking, inspections, notifications and role-based user assignment.">
+                                Application web pour la gestion santé et sécurité sur les chantiers. Suivi des incidents, inspections, notifications et affectations selon les rôles utilisateurs.
                             </p>
                             <div class="project-tech">
                                 <span class="tech-tag">JavaScript</span>
@@ -223,26 +305,22 @@
 
                 <!-- Project Card 6 -->
                 <div class="col-md-6 col-lg-4 fade-in delay-2">
-                    <a href="https://github.com/GamaSpeed/ProjectIA_mlflow_dagshub_2025" target="_blank"
-                        class="project-card">
+                    <a href="https://github.com/GamaSpeed/ProjectIA_mlflow_dagshub_2025" target="_blank" class="project-card">
                         <div class="project-image-container">
                             <i class="fab fa-github github-icon"></i>
-                            <img src="./images/projet6.png" alt="Projet 5" class="project-image">
+                            <img src="./images/projet6.png" alt="Projet 6" class="project-image">
                             <div class="project-overlay"></div>
                         </div>
                         <div class="project-body">
-                            <h3 class="project-title">Prediction du prix de l'immobilier en Russie</h3>
-                            <p class="project-description">
-                                Application qui permet l'estimation immobilière grâce à l'intelligence artificielle.
-                                Obtenez une valeur marchande précise et actualisée de votre maison, appartement, terrain
-                                ou investissement locatif en quelques clics, que vous soyez acheteur, vendeur,
-                                investisseur ou simple curieux
+                            <h3 class="project-title" data-fr="Prédiction Prix Immobilier" data-en="Real Estate Price Prediction">Prédiction Prix Immobilier</h3>
+                            <p class="project-description" data-fr="Estimation immobilière grâce à l'IA. Valeur marchande précise pour maison, appartement, terrain ou investissement locatif, avec tracking MLflow sur DagsHub." data-en="AI-powered real estate valuation. Accurate market value for houses, apartments, land or rental investment, with MLflow tracking on DagsHub.">
+                                Estimation immobilière grâce à l'IA. Valeur marchande précise pour maison, appartement, terrain ou investissement locatif, avec tracking MLflow sur DagsHub.
                             </p>
                             <div class="project-tech">
                                 <span class="tech-tag">Python</span>
                                 <span class="tech-tag">Scikit-learn</span>
                                 <span class="tech-tag">Flask</span>
-                                <span class="tech-tag">Mlflow</span>
+                                <span class="tech-tag">MLflow</span>
                             </div>
                         </div>
                     </a>
@@ -252,29 +330,418 @@
         </div>
     </section>
 
+    <!-- CV Section -->
+    <section class="cv-section py-5" id="cv-section">
+        <div class="container">
+            <h2 class="section-title fade-in" data-fr="Mon CV" data-en="My Resume">Mon CV</h2>
+
+            <div class="cv-container fade-in">
+                <!-- CV Tabs -->
+                <div class="cv-tabs">
+                    <button class="cv-tab active" id="tab-fr" onclick="showCV('fr')">
+                        <span>🇫🇷</span> <span data-fr="Version Française" data-en="French Version">Version Française</span>
+                    </button>
+                    <button class="cv-tab" id="tab-en" onclick="showCV('en')">
+                        <span>🇬🇧</span> <span data-fr="Version Anglaise" data-en="English Version">Version Anglaise</span>
+                    </button>
+                </div>
+
+                <!-- CV Preview FR -->
+                <div class="cv-preview" id="cv-fr">
+                    <div class="cv-preview-inner">
+                        <div class="cv-header-preview">
+                            <div>
+                                <h3>Franklin Gameni Toumani</h3>
+                                <p class="cv-role-preview">Ingénieur IA | Machine Learning | Vision par ordinateur | NLP</p>
+                                <div class="cv-contacts">
+                                    <span><i class="fas fa-envelope"></i> franklingameni@gmail.com</span>
+                                    <span><i class="fab fa-linkedin"></i> linkedin.com/in/franklin-gameni-toumani</span>
+                                    <span><i class="fab fa-github"></i> github.com/GamaSpeed</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Ottawa, Canada</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Profil -->
+                        <div class="cv-profile-block">
+                            <h4>Profil Professionnel</h4>
+                            <p>Ingénieur en Intelligence Artificielle diplômé du Collège La Cité (Ottawa), avec une solide formation en informatique et en mathématiques. Spécialisé en vision par ordinateur, NLP et déploiement de modèles en production (Docker, FastAPI, Google Cloud). Expérimenté dans la conception de pipelines IA de bout en bout avec PyTorch, n8n et les architectures RAG. Ouvert à toutes opportunités dans un environnement bilingue (français/anglais).</p>
+                        </div>
+
+                        <div class="cv-body-preview">
+                            <div class="cv-col">
+
+                                <div class="cv-section-block">
+                                    <h4>Formation</h4>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">Programme en Intelligence Artificielle</div>
+                                        <div class="cv-entry-org">Collège La Cité, Ottawa, Canada</div>
+                                        <div class="cv-entry-date">Sept. 2024 — 2026</div>
+                                    </div>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">Licence en Informatique</div>
+                                        <div class="cv-entry-org">Université de Douala, Cameroun</div>
+                                        <div class="cv-entry-date">Oct. 2018 — Juin 2022</div>
+                                    </div>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">Baccalauréat scientifique (Série C)</div>
+                                        <div class="cv-entry-org">Lycée Bilingue de Bobongo Petit Paris</div>
+                                        <div class="cv-entry-date">2018</div>
+                                    </div>
+                                </div>
+
+                                <div class="cv-section-block">
+                                    <h4>Expérience Professionnelle</h4>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">Agent Service Client</div>
+                                        <div class="cv-entry-org">HESS YIG — Ottawa, ON</div>
+                                        <div class="cv-entry-date">Oct. 2024 — En cours</div>
+                                        <ul class="cv-bullets">
+                                            <li>Gestion des stocks (FIFO) et communication bilingue client</li>
+                                            <li>Adaptabilité et esprit d'équipe en environnement soutenu</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">Développeur Web Junior</div>
+                                        <div class="cv-entry-org">Memphis Sarl Consulting — Douala, Cameroun</div>
+                                        <div class="cv-entry-date">Juin 2023 — Juil. 2024</div>
+                                        <ul class="cv-bullets">
+                                            <li>Déploiement d'une plateforme web Laravel 11 + Livewire</li>
+                                            <li>Formulaires dynamiques, tableaux de bord, optimisation MySQL</li>
+                                            <li>UI responsive avec Tailwind CSS</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">Consultant IT</div>
+                                        <div class="cv-entry-org">St Martin SA — Douala, Cameroun</div>
+                                        <div class="cv-entry-date">Avr. 2021 — Mai 2023</div>
+                                        <ul class="cv-bullets">
+                                            <li>Implémentation CRM, intégration paiements REST</li>
+                                            <li>Automatisation des processus métier</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">Technicien Informatique</div>
+                                        <div class="cv-entry-org">High Tech Corp's — Douala, Cameroun</div>
+                                        <div class="cv-entry-date">Sept. 2019 — Févr. 2021</div>
+                                        <ul class="cv-bullets">
+                                            <li>Diagnostic matériel/logiciel, configuration réseaux LAN/Wi-Fi</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="cv-col">
+
+                                <div class="cv-section-block">
+                                    <h4>Compétences Techniques</h4>
+                                    <div class="cv-skill-group">
+                                        <span class="cv-skill-label">Langages</span>
+                                        <div class="cv-skills-list">
+                                            <span class="cv-skill-chip">Python</span><span class="cv-skill-chip">JavaScript</span><span class="cv-skill-chip">PHP</span><span class="cv-skill-chip">SQL</span><span class="cv-skill-chip">C</span><span class="cv-skill-chip">Java</span>
+                                        </div>
+                                    </div>
+                                    <div class="cv-skill-group">
+                                        <span class="cv-skill-label">IA & ML</span>
+                                        <div class="cv-skills-list">
+                                            <span class="cv-skill-chip">PyTorch</span><span class="cv-skill-chip">TensorFlow</span><span class="cv-skill-chip">Scikit-learn</span><span class="cv-skill-chip">OpenCV</span><span class="cv-skill-chip">Hugging Face</span><span class="cv-skill-chip">LangChain</span>
+                                        </div>
+                                    </div>
+                                    <div class="cv-skill-group">
+                                        <span class="cv-skill-label">Spécialisations</span>
+                                        <div class="cv-skills-list">
+                                            <span class="cv-skill-chip">Computer Vision</span><span class="cv-skill-chip">NLP</span><span class="cv-skill-chip">Deep Learning</span><span class="cv-skill-chip">RAG</span><span class="cv-skill-chip">LLM</span>
+                                        </div>
+                                    </div>
+                                    <div class="cv-skill-group">
+                                        <span class="cv-skill-label">Déploiement</span>
+                                        <div class="cv-skills-list">
+                                            <span class="cv-skill-chip">FastAPI</span><span class="cv-skill-chip">Docker</span><span class="cv-skill-chip">Google Cloud</span><span class="cv-skill-chip">MLflow</span><span class="cv-skill-chip">DagsHub</span><span class="cv-skill-chip">n8n</span><span class="cv-skill-chip">Ollama</span><span class="cv-skill-chip">ChromaDB</span>
+                                        </div>
+                                    </div>
+                                    <div class="cv-skill-group">
+                                        <span class="cv-skill-label">Web & BDD</span>
+                                        <div class="cv-skills-list">
+                                            <span class="cv-skill-chip">React</span><span class="cv-skill-chip">Laravel</span><span class="cv-skill-chip">Node.js</span><span class="cv-skill-chip">MySQL</span><span class="cv-skill-chip">PostgreSQL</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cv-section-block">
+                                    <h4>Certifications</h4>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">PyTorch for Deep Learning Bootcamp</div>
+                                        <div class="cv-entry-org">Udemy — Mars 2026</div>
+                                    </div>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">Mastering Python OpenCV : 33 Projects</div>
+                                        <div class="cv-entry-org">Udemy — Mars 2026</div>
+                                    </div>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">Data Science : Analyse de données avec Python</div>
+                                        <div class="cv-entry-org">Udemy — Mars 2025</div>
+                                    </div>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">Python pour le Deep Learning & ML : A à Z</div>
+                                        <div class="cv-entry-org">Udemy — Mars 2025</div>
+                                    </div>
+                                </div>
+
+                                <div class="cv-section-block">
+                                    <h4>Langues</h4>
+                                    <div class="cv-lang">
+                                        <span>Français</span><div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div><span class="lang-level">Natif</span>
+                                    </div>
+                                    <div class="cv-lang">
+                                        <span>Anglais</span><div class="lang-bar"><div class="lang-fill" style="width:70%"></div></div><span class="lang-level">B2</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cv-actions">
+                        <a href="./cv/cv_fr.pdf" target="_blank" class="cv-view-btn">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span data-fr="Ouvrir dans un onglet" data-en="Open in new tab">Ouvrir dans un onglet</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CV Preview EN -->
+                <div class="cv-preview" id="cv-en" style="display:none;">
+                    <div class="cv-preview-inner">
+                        <div class="cv-header-preview">
+                            <div>
+                                <h3>Franklin Gameni Toumani</h3>
+                                <p class="cv-role-preview">AI Engineer | Machine Learning | Computer Vision | NLP</p>
+                                <div class="cv-contacts">
+                                    <span><i class="fas fa-envelope"></i> franklingameni@gmail.com</span>
+                                    <span><i class="fab fa-linkedin"></i> linkedin.com/in/franklin-gameni-toumani</span>
+                                    <span><i class="fab fa-github"></i> github.com/GamaSpeed</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Ottawa, Canada</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Profile -->
+                        <div class="cv-profile-block">
+                            <h4>Professional Profile</h4>
+                            <p>AI Engineer graduated from Collège La Cité (Ottawa) with a strong background in computer science and mathematics. Specialized in computer vision, NLP, and production model deployment (Docker, FastAPI, Google Cloud). Experienced in building end-to-end AI pipelines with PyTorch, n8n, and RAG architectures. Open to all opportunities and bilingual (French/English).</p>
+                        </div>
+
+                        <div class="cv-body-preview">
+                            <div class="cv-col">
+
+                                <div class="cv-section-block">
+                                    <h4>Education</h4>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">DEC — Artificial Intelligence</div>
+                                        <div class="cv-entry-org">Collège La Cité, Ottawa, Canada</div>
+                                        <div class="cv-entry-date">Sep. 2024 — 2026</div>
+                                    </div>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">Bachelor's in Computer Science</div>
+                                        <div class="cv-entry-org">University of Douala, Cameroon</div>
+                                        <div class="cv-entry-date">Oct. 2018 — Jun. 2022</div>
+                                    </div>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">Scientific Baccalaureate (Series C)</div>
+                                        <div class="cv-entry-org">Lycée Bilingue de Bobongo Petit Paris</div>
+                                        <div class="cv-entry-date">2018</div>
+                                    </div>
+                                </div>
+
+                                <div class="cv-section-block">
+                                    <h4>Work Experience</h4>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">Customer Service Agent</div>
+                                        <div class="cv-entry-org">HESS YIG — Ottawa, ON</div>
+                                        <div class="cv-entry-date">Oct. 2024 — Present</div>
+                                        <ul class="cv-bullets">
+                                            <li>Inventory management (FIFO) and bilingual customer communication</li>
+                                            <li>Teamwork and adaptability in a fast-paced environment</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">Junior Web Developer</div>
+                                        <div class="cv-entry-org">Memphis Sarl Consulting — Douala, Cameroon</div>
+                                        <div class="cv-entry-date">Jun. 2023 — Jul. 2024</div>
+                                        <ul class="cv-bullets">
+                                            <li>Deployed web platform with Laravel 11 + Livewire</li>
+                                            <li>Dynamic forms, dashboards, MySQL optimization</li>
+                                            <li>Responsive UI with Tailwind CSS</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">IT Consultant</div>
+                                        <div class="cv-entry-org">St Martin SA — Douala, Cameroon</div>
+                                        <div class="cv-entry-date">Apr. 2021 — May 2023</div>
+                                        <ul class="cv-bullets">
+                                            <li>CRM implementation, REST payment integration</li>
+                                            <li>Business process automation</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">IT Technician</div>
+                                        <div class="cv-entry-org">High Tech Corp's — Douala, Cameroon</div>
+                                        <div class="cv-entry-date">Sep. 2019 — Feb. 2021</div>
+                                        <ul class="cv-bullets">
+                                            <li>Hardware/software diagnostics, LAN/Wi-Fi network setup</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="cv-col">
+
+                                <div class="cv-section-block">
+                                    <h4>Technical Skills</h4>
+                                    <div class="cv-skill-group">
+                                        <span class="cv-skill-label">Languages</span>
+                                        <div class="cv-skills-list">
+                                            <span class="cv-skill-chip">Python</span><span class="cv-skill-chip">JavaScript</span><span class="cv-skill-chip">PHP</span><span class="cv-skill-chip">SQL</span><span class="cv-skill-chip">C</span><span class="cv-skill-chip">Java</span>
+                                        </div>
+                                    </div>
+                                    <div class="cv-skill-group">
+                                        <span class="cv-skill-label">AI & ML</span>
+                                        <div class="cv-skills-list">
+                                            <span class="cv-skill-chip">PyTorch</span><span class="cv-skill-chip">TensorFlow</span><span class="cv-skill-chip">Scikit-learn</span><span class="cv-skill-chip">OpenCV</span><span class="cv-skill-chip">Hugging Face</span><span class="cv-skill-chip">LangChain</span>
+                                        </div>
+                                    </div>
+                                    <div class="cv-skill-group">
+                                        <span class="cv-skill-label">Specializations</span>
+                                        <div class="cv-skills-list">
+                                            <span class="cv-skill-chip">Computer Vision</span><span class="cv-skill-chip">NLP</span><span class="cv-skill-chip">Deep Learning</span><span class="cv-skill-chip">RAG</span><span class="cv-skill-chip">LLM</span>
+                                        </div>
+                                    </div>
+                                    <div class="cv-skill-group">
+                                        <span class="cv-skill-label">Deployment</span>
+                                        <div class="cv-skills-list">
+                                            <span class="cv-skill-chip">FastAPI</span><span class="cv-skill-chip">Docker</span><span class="cv-skill-chip">Google Cloud</span><span class="cv-skill-chip">MLflow</span><span class="cv-skill-chip">DagsHub</span><span class="cv-skill-chip">n8n</span><span class="cv-skill-chip">Ollama</span><span class="cv-skill-chip">ChromaDB</span>
+                                        </div>
+                                    </div>
+                                    <div class="cv-skill-group">
+                                        <span class="cv-skill-label">Web & DB</span>
+                                        <div class="cv-skills-list">
+                                            <span class="cv-skill-chip">React</span><span class="cv-skill-chip">Laravel</span><span class="cv-skill-chip">Node.js</span><span class="cv-skill-chip">MySQL</span><span class="cv-skill-chip">PostgreSQL</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cv-section-block">
+                                    <h4>Certifications</h4>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">PyTorch for Deep Learning Bootcamp</div>
+                                        <div class="cv-entry-org">Udemy — Mar. 2026</div>
+                                    </div>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">Mastering Python OpenCV : 33 Projects</div>
+                                        <div class="cv-entry-org">Udemy — Mar. 2026</div>
+                                    </div>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">Data Science: Data Analysis with Python</div>
+                                        <div class="cv-entry-org">Udemy — Mar. 2025</div>
+                                    </div>
+                                    <div class="cv-entry">
+                                        <div class="cv-entry-title">Python for Deep Learning & ML: A to Z</div>
+                                        <div class="cv-entry-org">Udemy — Mar. 2025</div>
+                                    </div>
+                                </div>
+
+                                <div class="cv-section-block">
+                                    <h4>Languages</h4>
+                                    <div class="cv-lang">
+                                        <span>French</span><div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div><span class="lang-level">Native</span>
+                                    </div>
+                                    <div class="cv-lang">
+                                        <span>English</span><div class="lang-bar"><div class="lang-fill" style="width:70%"></div></div><span class="lang-level">B2</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cv-actions">
+                        <a href="./cv/cv_en.pdf" target="_blank" class="cv-view-btn">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span data-fr="Ouvrir dans un onglet" data-en="Open in new tab">Ouvrir dans un onglet</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
-            <div class="social-links">
-                <a href="https://github.com/GamaSpeed" target="_blank" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://linkedin.com/in/votre-profil" target="_blank" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="mailto:franklingameni@gmail.com" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
+            <div class="footer-content">
+                <p class="footer-name">Franklin Gameni</p>
+                <p class="footer-role" data-fr="Ingénieur en Intelligence Artificielle · Ottawa, Canada" data-en="Artificial Intelligence Engineer · Ottawa, Canada">Ingénieur en Intelligence Artificielle · Ottawa, Canada</p>
+                <div class="social-links">
+                    <a href="https://github.com/GamaSpeed" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/franklin-gameni-toumani-6a3255327" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:franklingameni@gmail.com" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <p class="text-secondary footer-copy">
+                    &copy; 2025 — <span data-fr="Développé avec" data-en="Built with">Développé avec</span> <span class="gradient-text">❤️</span>, passion <span data-fr="et du code" data-en="and code">et du code</span>.
+                </p>
             </div>
-            <p class="text-secondary">
-                &copy; 2025 Portfolio Personnel Développé avec <span class="gradient-text">❤️</span>, passion et du
-                code.
-            </p>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
 
+    <script>
+        // ─── Language toggle ───────────────────────────────────────────────────
+        let currentLang = 'fr';
+
+        function toggleLang() {
+            currentLang = currentLang === 'fr' ? 'en' : 'fr';
+            applyLang();
+        }
+
+        function applyLang() {
+            const label = document.getElementById('langLabel');
+            label.textContent = currentLang === 'fr' ? 'EN' : 'FR';
+
+            document.querySelectorAll('[data-fr][data-en]').forEach(el => {
+                const text = el.getAttribute('data-' + currentLang);
+                if (text) el.textContent = text;
+            });
+
+            // Auto-switch CV panel to match site language
+            showCV(currentLang);
+        }
+
+        // ─── CV tabs ───────────────────────────────────────────────────────────
+        function showCV(lang) {
+            document.getElementById('cv-fr').style.display = lang === 'fr' ? 'block' : 'none';
+            document.getElementById('cv-en').style.display = lang === 'en' ? 'block' : 'none';
+            document.getElementById('tab-fr').classList.toggle('active', lang === 'fr');
+            document.getElementById('tab-en').classList.toggle('active', lang === 'en');
+        }
+
+        // ─── Intersection Observer for scroll animations ───────────────────────
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.style.opacity = '1';
+                    e.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
 </html>
