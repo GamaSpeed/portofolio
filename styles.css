@@ -490,9 +490,19 @@ nav a:hover::after { width: 100%; }
 .project-title {
     font-size: 1.25rem;
     font-weight: 700;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
     color: var(--text-primary);
     font-family: 'JetBrains Mono', monospace;
+}
+
+.project-role {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent-secondary);
+    margin-bottom: 0.7rem;
+    opacity: 0.85;
+    letter-spacing: 0.03em;
 }
 
 .project-description {
@@ -511,6 +521,9 @@ nav a:hover::after { width: 100%; }
 }
 
 .tech-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
     background: rgba(100, 255, 218, 0.1);
     color: var(--accent-color);
     padding: 0.3rem 0.75rem;
@@ -519,6 +532,11 @@ nav a:hover::after { width: 100%; }
     font-family: 'JetBrains Mono', monospace;
     border: 1px solid rgba(100, 255, 218, 0.2);
     transition: all 0.3s ease;
+}
+
+.tech-tag i[class*="devicon"] {
+    font-size: 1rem;
+    line-height: 1;
 }
 
 .project-card:hover .tech-tag {
